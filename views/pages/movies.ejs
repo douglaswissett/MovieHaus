@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <%- include ../partials/head %>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-inverse" id="removeRadius">
+      <%- include ../partials/nav %>
+    </nav>
+
+    <div class="search-nav">
+      <h1>Search for movie</h1>
+      <form action="/movies" method="get">
+        <input type="text" name="s" placeholder="Movie Title" class="movieField">
+        <input type="submit" value="Search" class="searchBtn">
+      </form>
+
+      <form action="/search">
+        <input type="submit" value="Back" class="btn-secondary backBtn">
+      </form>
+
+    </div>
+
+    <section id="container-2">
+    
+    <% movieData.forEach(function(movie) { %>
+
+      <div class="wrapper-2">
+        <h3 class="movie-header"><%= movie.Title %></h3>
+        <ul id="movie-list">
+          <label>Year</label>
+          <li><%= movie.Year %></li>
+        </ul>
+        <div class="movie-pic">
+          <img src="<%= movie.Poster %>" class="center">
+        </div>
+
+        <form action="/movies"  method="POST">
+          <input type="hidden" name="title" value="<%= movie.Title %>">
+          <input type="hidden" name="year" value="<%= movie.Year %>">
+          <input type="hidden" name="poster" value="<%= movie.Poster %>">
+          <input type="hidden" name="imdbID" value="<%= movie.imdbID %>">
+          <input type="text" name="showTimes" placeholder="Add Times">
+          <input type="submit" value="Add">
+        </form>
+      </div>
+
+    <% }) %>
+    
+    </section>
+
+    <footer class="container-fluid text-center">
+      <%- include ../partials/footer %>
+    </footer>
+
+  </body>
+</html>

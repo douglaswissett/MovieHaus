@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <%- include ../partials/head %>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-inverse" id="removeRadius">
+      <%- include ../partials/nav %>
+    </nav>
+
+    <div class="splash">
+      <h1>Welcome to Movie Haus</h1>      
+    </div>
+
+    <h1 class="larger2 text-center">Latest movies</h1>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <%- include ../partials/carousel %>
+    </div>
+
+    <div class="container text-center">    
+      <h3 class="larger spacing">Current Movies In Theatre:</h3><br>
+      
+      <% data.forEach(function(movie, index) { %>
+        <div class="movieDiv">
+          <h5><a href="/search/<%= index + 1 %>"><%= movie.title %></a></h5>
+        </div>
+      <% }) %>
+
+    </div><br>
+
+
+    <footer class="container-fluid text-center">
+      <%- include ../partials/footer %>
+    </footer>
+
+  </body>
+</html>

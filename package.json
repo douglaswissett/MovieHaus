@@ -1,0 +1,23 @@
+{
+  "name": "moviehaus",
+  "version": "1.0.0",
+  "description": "Movie Haus Homework",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Douglas W Walker",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "dotenv": "^2.0.0",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "method-override": "^2.3.5",
+    "morgan": "^1.7.0",
+    "path": "^0.12.7",
+    "pg": "^4.4.6",
+    "request": "^2.69.0",
+    "serve-favicon": "^2.3.0"
+  }
+}

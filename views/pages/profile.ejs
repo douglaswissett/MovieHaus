@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <%- include ../partials/head %>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse" id="removeRadius">
+      <%- include ../partials/nav %>
+    </nav>
+
+    <div class="wrapper">
+      <h3 id="profile-header"><%= movieData.title %></h3>
+      <ul class="profile-list">
+        <label>Description</label>
+        <li><%= moreData.Plot %></li>
+        <label>Year</label>
+        <li><%= movieData.year %></li>
+        <label>Director</label>
+        <li><%= moreData.Director %></li>
+        <label>Actors</label>
+        <li><%= moreData.Actors %></li>
+        <label>Showing</label>
+        <li><%= movieData.showtimes %></li>
+      </ul>
+
+      <form method="POST" action="/search/<%= movieID + '?_method=DELETE' %>">
+        <input type="hidden" name="movieID" value="<%= movieData.id %>">
+        <button type="submit" class="btn btn-danger deleteBtn2">Delete</button>
+      </form>
+
+    </div>
+
+      <div class="profile-pic">
+        <img src="<%= movieData.img_url %>">
+      </div>
+
+
+    <footer class="container-fluid text-center">
+      <%- include ../partials/footer %>
+    </footer>
+
+  </body>
+</html>

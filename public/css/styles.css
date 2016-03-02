@@ -1,0 +1,214 @@
+  /* Remove the navbar's default margin-bottom and rounded borders */ 
+  .navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+
+#removeRadius {
+  border-radius: 0px;
+}
+
+.container-fluid {
+  max-height: 75px;
+}
+  
+  /* Add a gray background color and some padding to the footer */
+  footer {
+    background-color: #f2f2f2;
+    padding: 25px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+.carousel-inner img {
+    width: 20%;
+    margin: auto;
+    min-height:200px;
+    max-height: 200px;
+}
+
+/* Hide the carousel text when the screen is less than 600 pixels wide */
+@media (max-width: 600px) {
+  .carousel-caption {
+    display: none; 
+  }
+}
+
+.movieDiv {
+  padding: 5px;
+}
+
+.movieDiv a {
+  color: black;
+}
+
+#profile-header {
+  font-size: 2em;
+  display: block;
+}
+
+.movie-header {
+  font-size: 2em;
+  display: block;
+  padding: 20px;
+}
+
+.wrapper {
+  width: 50%;
+  margin: 60px auto 40px 150px;
+  overflow: auto;
+}
+
+.wrapper li {
+  list-style: none;
+  padding: 5px;
+}
+
+.wrapper-2 {
+  padding-right: 20px;
+  overflow: auto;
+  /*border: 1px solid red;*/
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 2px 2px 10px black;
+}
+
+.wrapper-2 li {
+  list-style: none;
+  margin-left: 10px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.profile-pic {
+  width: 300px;
+  float: right;
+  position: relative;
+  top: -415px;
+  left: -100px;
+
+}
+
+#movie-list {
+  display: inline-block;
+  max-width: 300px;
+  /*border: 1px solid lime;*/
+  padding-top: 30px;
+}
+
+.movie-pic {
+  width: 200px;
+  margin: 0 auto;
+  /*border: 1px solid blue;*/
+  display: inline-block;
+  float: right;
+}
+
+.center {
+  text-align: center;
+  margin: 0 auto;
+}
+
+#container-2 {
+  display: inline-block;
+  width: 600px;
+  margin: 88px 0 0 100px;
+  
+}
+
+.test {
+  background-color: red;
+}
+
+.search-nav {
+  display: inline-block;
+  float: left;
+  width: 380px;
+  height: 160px;
+  padding: 30px;
+  padding-top: 20px;
+  margin: 60px 0 200px 100px;
+  box-shadow: 2px 2px 10px black;
+}
+
+#main-body {
+  position: relative;
+  overflow: auto;
+}
+
+.splash {
+  width: 100%;
+  height: 100px;
+  margin: 0;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.splash h1 {
+  font-weight: bold;
+  font-size: 3em;
+  text-shadow: 0px 0px 20px #222;
+  color: white;
+}
+
+.larger {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.larger2 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+#container-2 h2 {
+  margin-bottom: 60px;
+  padding-left: 10px;
+}
+
+.container-1 {
+  height: 400px;
+  text-align: center;
+}
+
+.container-1 h1 {
+  padding-top: 130px;
+  font-size: 3em;
+}
+
+.backBtn {
+  margin: 10px 0;
+  width: 80px;
+}
+
+.deleteBtn {
+  margin: 20px 0 0 35px;
+}
+
+.deleteBtn2 {
+  margin: 20px 0 0 35px;
+}
+
+.searchBtn {
+  margin-left: 5px;
+}
+
+.movieField {
+  width: 220px;
+}
+
+.spacing {
+  margin: 20px 0 0px;
+}
+
+.spacing2 {
+  margin: 80px 0 40px;
+}
+
+.profile-list {
+  padding-top: 20px;
+}

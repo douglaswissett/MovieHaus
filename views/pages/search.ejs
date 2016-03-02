@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <%- include ../partials/head %>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-inverse" id="removeRadius">
+      <%- include ../partials/nav %>
+    </nav>
+
+    <div id="main-body">
+      <div class="search-nav">
+        <h1>Search for movie</h1>
+        <form action="/movies" method="get">
+          <input type="text" name="s" placeholder="Movie Title" class="movieField">
+          <input type="submit" value="Search" class="searchBtn">
+        </form>
+
+        <form action="/">
+          <input type="submit" value="Back" class="btn-secondary backBtn">
+        </form>
+      </div>
+
+      <section id="container-2">
+
+        <h2>Collection List</h2>
+
+        <% movieData.forEach(function(movie, index) { %>
+          <div class="wrapper-2">
+            <h3 id="profile-header"><a href="/search/<%= index + 1 %>"><%= movie.title %></a></h3>
+            <ul id="movie-list">
+
+              <label>Year</label>
+              <li><%= movie.year %></li>
+              
+              <label>Showing</label>
+              <li><%= movie.showtimes %></li>
+            </ul>
+            <div class="movie-pic">
+            <a href="/search/<%= index + 1 %>"><img src="<%= movie.img_url %>" class="center"></a>
+            </div>
+
+            <form method="POST" action="/search/<%= movie.id + '?_method=DELETE' %>">
+              <input type="hidden" name="movieID" value="<%= movie.id %>">
+              <button type="submit" class="btn btn-danger deleteBtn">Delete</button>
+            </form>
+
+          </div>
+        <% }) %>
+
+      </section>
+    </div>
+
+    <footer class="container-fluid text-center">
+      <%- include ../partials/footer %>
+    </footer>
+    
+  </body>
+</html>
