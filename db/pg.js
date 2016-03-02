@@ -1,6 +1,11 @@
+'use strict'
 var pg = require('pg');
-var conString = "postgres://douglaswalker:"+ process.env.DB_PASS +"@localhost/moviedb";
 
+if(process.env.ENVIRONMENT === 'production') {
+  var conString = process.env.DATABASE_URL;  
+} else {
+  var conString = "postgres://"+process.env.DB_USER+":"+ process.env.DB_PASS +"@"+process.env.DB_HOST+"/"+process.env.DB_NAME+"";
+}
 
 
 function showMovies(req, res, next) {

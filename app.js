@@ -1,3 +1,5 @@
+require('dotenv').config();
+'use strict'
 var express        = require('express');
 var logger         = require('morgan');
 var request        = require('request');
@@ -7,7 +9,7 @@ var path           = require('path');
 var methodOverride = require('method-override');
 var app            = express();
 var db             = require('./db/pg');
-var dotenv         = require('dotenv');
+
 
 app.use(logger('dev'));
 app.use(express.static(path.join(__dirname, '/public')));
@@ -17,7 +19,6 @@ app.use(bodyParser.json());
 app.use(favicon(__dirname + '/public/favicon.ico'));
 app.set('view engine', 'ejs');
 
-dotenv.load();
 
 // Routes
 app.get('/', db.showMovies, (req, res) => {
